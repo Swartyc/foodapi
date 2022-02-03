@@ -28,11 +28,20 @@ class FoodController extends Controller
     ]);
     }
     public function details($request){
-      $response_details = Http::get('https://api.spoonacular.com/recipes/'.$request.'/ingredientWidget.json?apiKey=4ab5c3e49cb746eb8dd35673e691d303');
-      $fooddetailsequipment = $response_details->json();
-      //dd($fooddetailsequipment);
+      $response_details_summarise = Http::get('https://api.spoonacular.com/recipes/'.$request.'/summary?apiKey=4ab5c3e49cb746eb8dd35673e691d303');
+      $response_details_ingredients = Http::get('https://api.spoonacular.com/recipes/'.$request.'/ingredientWidget.json?apiKey=4ab5c3e49cb746eb8dd35673e691d303');
+      $response_details_equipments = Http::get('https://api.spoonacular.com/recipes/'.$request.'/equipmentWidget.json?apiKey=4ab5c3e49cb746eb8dd35673e691d303');
+      $response_details_instructions = Http::get('https://api.spoonacular.com/recipes/'.$request.'/analyzedInstructions?apiKey=4ab5c3e49cb746eb8dd35673e691d303');
+      $fooddetailssummarise = $response_details_summarise->json();
+      $fooddetailsingredient = $response_details_ingredients->json();
+      $fooddetailsequipment = $response_details_equipments->json();
+      $fooddetailsinstruction = $response_details_instructions->json();
+      //dd($fooddetailsinstruction);
       return view('fooddetails',[
-        'food'=> $fooddetailsequipment,
+        'summarise'=> $fooddetailssummarise,
+        'food'=> $fooddetailsingredient,
+        'equipment'=> $fooddetailsequipment,
+        'instruction'=> $fooddetailsinstruction,
     ]);
     }
 }
