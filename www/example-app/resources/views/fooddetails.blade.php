@@ -8,17 +8,16 @@
     <title>Food</title>
     <style type="text/tailwindcss">    
         @layer utilities {      
-            .ruby {        
-                grid-template-columns: repeat(auto-fill, 230px);   
-                grid-gap: 32px;   
-                padding-top: 64px;
-            }    
+            
         }
         
         
     </style>
 </head>
 <body>  
+        <button class="fixed left-6 top-6 w-16 animate-pulse hover:animate-none" onclick="window.history.back();">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980.05 840.1"><defs><style>.cls-1{font-size:128.68px;fill:#fff;font-family:Inter-Black, Inter;font-weight:800;letter-spacing:-0.01em;}.cls-2{letter-spacing:0em;}</style></defs><g id="Calque_2" data-name="Calque 2"><g id="Calque_1-2" data-name="Calque 1"><path d="M370.55,819.55a70,70,0,0,0,99-99l-230.5-230.5h671a70,70,0,0,0,0-140h-671l230.5-230.5a70,70,0,0,0-99-99l-350,350a69.89,69.89,0,0,0,0,99l350,350Z"/><text class="cls-1" transform="translate(359.28 465.28)">R<tspan class="cls-2" x="84.45" y="0">eturn</tspan></text></g></g></svg>
+        </button>
         <h1 class="py-4 text-4xl font-bold text-center">{{$summarise["title"]}}</h1>
         <h2 class="uppercase text-2xl font-bold px-12 pt-12 pb-6">Summarise of this recipe :</h2>
         <p class="px-12 text-justify hover:cursor-default">{!!$summarise["summary"]!!}</p>
@@ -47,7 +46,7 @@
             </table>
 
             <?php $numbers_equip = count($equipment["equipment"]); ?>
-                <h2 class="uppercase text-2xl font-bold px-16">Equipments :</h2>
+                <h2 class="uppercase text-2xl font-bold px-16 pb-4">Equipments :</h2>
                 <div class="flex flex-wrap px-16">
                     @for ($i = 0; $i < $numbers_equip; $i++)
                         <img  class="m-auto" src='https://spoonacular.com/cdn/equipment_250x250/{{$equipment["equipment"][$i]["image"]}}'/>
