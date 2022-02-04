@@ -23,10 +23,10 @@
 </head>
 <body>
     <h1 class="py-4 text-6xl font-bold text-center text-green-800">Find recipe ideas</h1>
-    <form action="{{route('food.search')}}" class="flex justify-center flex-wrap py-16 test-xl" method="post">
+    <form action="{{route('food.search')}}" class="flex justify-center flex-wrap py-16 test-xl gap-16" method="post">
         <input class="border-4 border-green-600 rounded-lg bg-green-500 placeholder-green-900 px-4 py-1 hover:cursor-text" name="word" type="text" placeholder="Pasta">
         <div class="border-2 border-green-600 rounded-lg bg-green-500 text-black px-4 py-1 mx-8">
-            Number :
+            View :
             <select class="border-2 border-green-400 bg-green-500 text-black hover:cursor-cell" value="5" name="number_choose" id="search-bar">
                 <option value="5">5</option>
                 <option value="10">10</option>
@@ -52,7 +52,7 @@
 
         @for ($i = 0; $i < $numbers; $i++)
         <?php $id_details=$food["results"][$i]["id"]; ?>
-            <a class="max-imag" href="{{route('food.details',[$id_details])}}" >
+            <a class="max-imag text-center p-1 border-4 border-green-600 transition-all rounded-lg hover:shadow-lg hover:shadow-green-600 overflow-hidden hover:scale-105" href="{{route('food.details',[$id_details])}}" >
                 <img src='{{$food["results"][$i]["image"]}}' alt='{{$food["results"][$i]["title"]}}_image'/>
                 <legend>{{$food["results"][$i]["title"]}}</legend>
             </a>
