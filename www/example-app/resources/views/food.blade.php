@@ -25,9 +25,9 @@
     <h1 class="py-4 text-6xl font-bold text-center text-green-800">Find recipe ideas</h1>
     <form action="{{route('food.search')}}" class="flex justify-center flex-wrap py-16 test-xl gap-16" method="post">
         <input class="border-4 border-green-600 rounded-lg bg-green-500 placeholder-green-900 px-4 py-1 hover:cursor-text" name="word" type="text" placeholder="Pasta">
-        <div class="border-2 border-green-600 rounded-lg bg-green-500 text-black px-4 py-1 mx-8">
+        <div class="border-2 border-green-600 rounded-lg bg-green-500 px-4 py-1 mx-8 text-green-900">
             View :
-            <select class="border-2 border-green-400 bg-green-500 text-black hover:cursor-cell" value="5" name="number_choose" id="search-bar">
+            <select class="border-2 border-green-400 bg-green-500 hover:cursor-cell text-green-900" value="5" name="number_choose" id="search-bar">
                 <option value="5">5</option>
                 <option value="10">10</option>
                 <option value="20">20</option>
@@ -36,7 +36,7 @@
             </select>
         </div>
         @csrf
-        <input class="border-2 border-green-600 rounded-lg bg-green-500 text-black px-4 py-1 hover:cursor-pointer" type="submit">
+        <input class="border-2 border-green-600 rounded-lg bg-green-500 px-4 py-1 hover:cursor-pointer text-green-900" type="submit">
     </form>
     <?php 
     if (empty($_POST['number_choose'])) {
