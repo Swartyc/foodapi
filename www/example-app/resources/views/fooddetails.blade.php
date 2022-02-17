@@ -6,13 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
     <title>Food</title>
-    <style type="text/tailwindcss">    
-        @layer utilities {      
-            
-        }
-        
-        
-    </style>
 </head>
 <body>  
         <button class="fixed left-6 top-6 w-16 animate-pulse hover:animate-none" onclick="window.history.back();">
