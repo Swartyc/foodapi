@@ -35,7 +35,7 @@
 <hr/>
 <br/>
 <h3><ins>Structure :</ins></h3>
-<code>
+<pre>
 foodapi
 └───www
     └───example-app
@@ -52,7 +52,7 @@ foodapi
         |       └───welcome.blade.php
         └───routes
             └───web.php
-</code>
+</pre>
 <br/>
 <p>MVC :</p>
 <ul>
