@@ -13,7 +13,7 @@
         </button>
         <h1 class="py-4 text-4xl font-bold text-center text-green-800">{{$summarise["title"]}}</h1>
         <h2 class="uppercase text-2xl font-bold px-12 pt-12 pb-6 text-green-700">Summarise of this recipe :</h2>
-        <p class="px-12 text-justify hover:cursor-default text-green-600">{!!$summarise["summary"]!!}</p>
+        <p class="px-12 text-justify hover:cursor-default text-green-600 cursor-context-menu">{!!$summarise["summary"]!!}</p>
         <div>
             <?php $numbers = count($food["ingredients"]); ?>
             <table class="border-4 border-green-800 m-auto my-16">
