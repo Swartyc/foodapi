@@ -2,7 +2,7 @@
 
 <h3 align="center">Explications de l'API<h3>
 <h3><ins>Page principale :</ins></h3>
-<p>Elle affiche des recettes prises sur <a href="https://spoonacular.com/food-api">spoonacular</a>.</p>
+<p>Elle affiche des recettes prises sur <a target="_blank" href="https://spoonacular.com/food-api">spoonacular</a>.</p>
 <br/>
 <p>Champs dans la navigation :</p>
 <ol>
