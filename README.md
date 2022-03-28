@@ -42,14 +42,14 @@ foodapi
         ├───app
         │   ├───Http
         │   │   └───Controllers
-        |   |       └───FoodController.php
+        │   │       └───FoodController.php
         ├───resources
         │   └───views
         │       ├───errors
-        |       |   └───500.blade.php
-        |       ├───food.blade.php
+        │       │   └───500.blade.php
+        │       ├───food.blade.php
         │       ├───fooddetails.blade.php
-        |       └───welcome.blade.php
+        │       └───welcome.blade.php
         └───routes
             └───web.php
 </pre>
