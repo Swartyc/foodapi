@@ -22,4 +22,7 @@ Route::get('/', function () {
 Route::get('/food', [App\Http\Controllers\FoodController::class,'index'])->name("food.index");
 Route::post('/food-search', [App\Http\Controllers\FoodController::class,'search'])->name("food.search");
 Route::get('/food-details/{id}', [App\Http\Controllers\FoodController::class,'details'])->name("food.details");
-                    ///{id}
+
+// Formulaire de contact
+Route::get('/contact', [App\Http\Controllers\ContactController::class, 'index'])->name('contact-form');
+Route::post('/contact', [App\Http\Controllers\ContactController::class, 'sendMail'])->name('contact-send');
